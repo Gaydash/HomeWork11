@@ -11,6 +11,14 @@ public class ListPerson {
         listPerson.add(human);
     }
 
+    public List<Person> getListPerson() {
+        return listPerson;
+    }
 
-
+    @Override
+    public String toString() {
+        return "ListPerson{" +
+                "listPerson=" + listPerson +
+                 + '}' + "\n";
+    }
 }
