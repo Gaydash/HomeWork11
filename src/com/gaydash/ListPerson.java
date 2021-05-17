@@ -19,6 +19,6 @@ public class ListPerson {
     public String toString() {
         return "ListPerson{" +
                 "listPerson=" + listPerson +
-                 + '}' + "\n";
+                +'}' + "\n";
     }
 }

@@ -5,16 +5,18 @@ public class Person {
     private String firstName;
     private String lastName;
     private int age;
-    private double weight;
+    private int weight;
     private int height;
 
-    public Person(String firstName, String lastName, int age) {
+    public Person(String firstName, String lastName, int age, int weight, int height) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.weight = weight;
+        this.height = height;
     }
 
-    public Person(String firstName, String lastName, double weight) {
+    public Person(String firstName, String lastName, int weight) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.weight = weight;
@@ -32,7 +34,7 @@ public class Person {
         this.age = age;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
