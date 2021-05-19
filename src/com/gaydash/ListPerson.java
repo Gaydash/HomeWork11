@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class ListPerson {
 
-    private static int COUNT = 10;
+    private static int COUNT = 100;
     public static final String[] LAST_NAMES = new String[]{"Иванов", "Петров", "Сидоров", "Козаков", "Баранов"};
     public static final String[] FIRST_NAMES = new String[]{"Вася", "Петя", "Саша", "Кирилл", "Борис"};
     private static final Random RANDOM = new Random();
