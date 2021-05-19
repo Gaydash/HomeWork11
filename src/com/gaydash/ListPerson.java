@@ -2,23 +2,41 @@ package com.gaydash;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ListPerson {
 
-    private List<Person> listPerson = new ArrayList<>();
+    private static int COUNT = 10;
+    public static final String[] LAST_NAMES = new String[]{"Иванов", "Петров", "Сидоров", "Козаков", "Баранов"};
+    public static final String[] FIRST_NAMES = new String[]{"Вася", "Петя", "Саша", "Кирилл", "Борис"};
+    private static final Random RANDOM = new Random();
 
-    public void addHuman(Person human) {
-        listPerson.add(human);
+    public static Person generatePerson() {
+        String firstName = FIRST_NAMES[RANDOM.nextInt(FIRST_NAMES.length)];
+        String lastName = LAST_NAMES[RANDOM.nextInt(LAST_NAMES.length)];
+
+        int age = RANDOM.nextInt(100);
+
+        int weight;
+        int height;
+
+        if (age < 10) {
+            weight = RANDOM.nextInt(20) + 3;
+            height = RANDOM.nextInt(70) + 50;
+        } else {
+            weight = RANDOM.nextInt(100) + 30;
+            height = RANDOM.nextInt(100) + 100;
+        }
+
+        return new Person(firstName, lastName, age, weight, height);
     }
 
-    public List<Person> getListPerson() {
-        return listPerson;
+    public static List<Person> generate100personsList() {
+        List<Person> result = new ArrayList<>();
+        for (int i = 0; i < COUNT; i++) {
+            result.add(generatePerson());
+        }
+        return result;
     }
 
-    @Override
-    public String toString() {
-        return "ListPerson{" +
-                "listPerson=" + listPerson +
-                +'}' + "\n";
-    }
 }
