@@ -3,6 +3,8 @@ package com.gaydash;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ListPerson {
 
@@ -37,6 +39,11 @@ public class ListPerson {
             result.add(generatePerson());
         }
         return result;
+    }
+
+    public static Set<Person> uniquePersonsList(List<Person> arg) {
+        Set<Person> resultSet = new HashSet<>(arg);
+        return resultSet;
     }
 
 }
